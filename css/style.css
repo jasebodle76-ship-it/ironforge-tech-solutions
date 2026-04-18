@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #111;
+  color: #f4f4f4;
+}
+
+header {
+  background: #1b1b1b;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #a65a2e;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #a65a2e;
+  color: white;
+  padding: 0.8rem 1.4rem;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.services-preview {
+  padding: 3rem 2rem;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 200px;
+  background: #222;
+  padding: 1.5rem;
+  border-left: 4px solid #a65a2e;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1b1b1b;
+  margin-top: 2rem;
+}
