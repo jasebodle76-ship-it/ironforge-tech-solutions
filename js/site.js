@@ -143,3 +143,15 @@ window.addEventListener("resize", resizeCanvas);
 
 resizeCanvas();
 animate();
+// === UPDATED BACKGROUND CONTROL ===
+
+document.addEventListener("DOMContentLoaded", () => {
+    const river = document.querySelector(".binary-river");
+
+    // Delay flow until build completes
+    setTimeout(() => {
+        if (river) {
+            river.classList.add("river-flow");
+        }
+    }, 2500);
+});

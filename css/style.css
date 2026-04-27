@@ -10,28 +10,93 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #020403;
+  background: #000;
   color: #e8fff9;
   line-height: 1.6;
+  overflow-x: hidden;
 }
+
+/* === UPDATED COSMETIC LAYER SYSTEM === */
+
+.binary-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.binary-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: buildIn 2.5s ease forwards;
+}
+
+.binary-mountains {
+  background-image: url("../images/red-binary-mountains.png");
+  background-position: top center;
+  animation-delay: 0.2s;
+}
+
+.binary-forest {
+  background-image: url("../images/green-binary-forest.png");
+  background-position: center;
+  animation-delay: 0.6s;
+}
+
+.binary-river {
+  background-image: url("../images/blue-binary-river.png");
+  background-position: center;
+  animation-delay: 1s;
+}
+
+@keyframes buildIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+    filter: blur(6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+.river-flow {
+  animation: riverMove 6s linear infinite;
+}
+
+@keyframes riverMove {
+  0% {
+    background-position: center top;
+  }
+
+  100% {
+    background-position: center bottom;
+  }
+}
+
+/* === PAGE STRUCTURE === */
 
 .hero {
   position: relative;
+  z-index: 1;
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, #06251f 0%, #020403 70%);
+  background: transparent;
 }
 
 canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  display: none;
 }
 
 .hero::after {
@@ -116,6 +181,8 @@ canvas {
 }
 
 .section {
+  position: relative;
+  z-index: 1;
   padding: 70px 20px;
   max-width: 1100px;
   margin: auto;
@@ -189,6 +256,8 @@ canvas {
 }
 
 footer {
+  position: relative;
+  z-index: 1;
   padding: 25px 15px;
   text-align: center;
   color: #7fd8c8;
