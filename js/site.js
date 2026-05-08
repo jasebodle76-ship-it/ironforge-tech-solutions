@@ -5,5 +5,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (river) {
       river.classList.add("river-flow");
     }
-  }, 2500);
+  }, 900);
 });
